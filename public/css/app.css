@@ -1,0 +1,143 @@
+body {
+    height: 100vh;
+}
+
+
+#carouselExample {
+    height: 350px!important;
+}
+
+.section-notices {
+    margin-top: 2rem;
+}
+
+.page-content {
+    margin-bottom: 12rem;
+}
+
+
+.header-page {
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 3.5rem;
+}
+
+.navbar-brand .image {
+    height: 350px!important;
+}
+
+.section-notices {
+    flex-wrap: nowrap;
+    max-width: 350px;
+}
+
+.card:not(:last-child) {
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .section-notices {
+        flex-wrap: nowrap;
+        min-width: 33.3333%
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-notices {
+        flex-wrap: wrap;
+        min-width: 35%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-notices .card {
+        flex-wrap: wrap;
+        min-width: 100%;
+    }
+
+    .section-notices .card:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
+/*
+    FOOTER
+*/
+.page {
+    margin-bottom: 5em;
+}
+
+
+.col-medias-social-buttons .h4 {
+    margin-bottom: 2em;
+}
+
+.brand-footer {
+    width: 200px;
+}
+
+.medias-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 1em;
+}
+
+.social-item {
+    width: 100px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.social-item:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+    background-color: #000;
+    color: #4d3efc;
+}
+
+
+/* awesome font */
+.fa-facebook-f {
+ color: #4d3efc;
+}
+.fa-twitter {
+    color: #1DA1F2!important;
+}
+
+.fa-instagram {
+    color: #833AB4;
+}
+
+.fa-youtube {
+    color: #FF0000;
+}
+
+.section-notice-main {
+    width: 100%;
+    height: 500px;
+}
+
+.section-notice-main .card-img-top {
+    background-image: url("https://picsum.photos/200/300");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.shadow {
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.section-notice-main .card-img-top .card-body .card-title{
+    color: #fff;
+    font-size: 2.4rem
+}

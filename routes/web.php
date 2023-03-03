@@ -14,5 +14,34 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+})->name('site.home');
+
+Route::get('/contact', function () {
+    return view('contato');
+})->name('site.contato');
+
+Route::get('/about', function () {
+    return view('sobre');
+})->name('site.sobre');
+
+
+Route::prefix('/categories')->group(function(){
+
+    Route::get('/novidades', function () {
+        return view('categorias.novidades');
+    })->name('cat.novidades');
+
+    Route::get('/tecnologia', function () {
+        return view('categorias.tecnologia');
+    })->name('cat.tecnologia');
+
+    Route::get('/projetos', function () {
+        return view('categorias.projetos');
+    })->name('cat.projetos');
+
+    Route::get('/eventos', function () {
+        return view('categorias.eventos');
+    })->name('cat.eventos');
+
 });
