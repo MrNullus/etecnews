@@ -3,6 +3,11 @@ body {
 }
 
 
+.btn-learn-more {
+    width: 300px;
+    height: 40px;
+}
+
 #carouselExample {
     height: 350px!important;
 }
@@ -65,9 +70,6 @@ body {
 
 
 
-/*
-    FOOTER
-*/
 .page {
     margin-bottom: 5em;
 }
@@ -125,6 +127,9 @@ body {
 }
 
 .section-notice-main .card-img-top {
+    position: relative;
+    top: 0; left: 0;
+    padding: 0 0;
     background-image: url("https://picsum.photos/200/300");
     background-repeat: no-repeat;
     background-position: center;
@@ -133,11 +138,64 @@ body {
 
 .shadow {
     position: absolute;
+    top: 0; left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    height: inherit;
+    background: rgba(0, 0, 0, 0.6);
 }
 
-.section-notice-main .card-img-top .card-body .card-title{
+.section-notice-main .card-img-top .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
     color: #fff;
-    font-size: 2.4rem
+    font-size: 2.4rem;
+    padding: 3rem;
 }
+
+.section-notice-main .card-img-top .card-body h5 {
+    margin-bottom: 2.6rem;
+}
+.section-notice-main .card-img-top .card-body p {
+    margin: 2rem;
+}
+
+.footer-page {
+    padding-bottom: 2.5rem;
+}
+
+#contact-form .row > div {
+    margin-bottom: 2.4rem;
+}
+
+.btn-send-contact {
+    height: 44px;
+    width: 60%;
+}
+
+
+.img-about {
+    border-radius: 2rem;
+}
+
+.jumbotron {
+    position: relative;
+    padding: 0 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.jumbotron.eventos {
+    background-image: url("../images/eventos.jpg");
+}
+.jumbotron.novidades {
+    background-image: url("../images/telefone.png");
+}
+.jumbotron.projetos {
+    background-image: url("../images/projetos.webp");
+}
+
