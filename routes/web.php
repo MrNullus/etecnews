@@ -32,10 +32,6 @@ Route::prefix('/categories')->group(function(){
         return view('categorias.novidades');
     })->name('cat.novidades');
 
-    Route::get('/tecnologia', function () {
-        return view('categorias.tecnologia');
-    })->name('cat.tecnologia');
-
     Route::get('/projetos', function () {
         return view('categorias.projetos');
     })->name('cat.projetos');

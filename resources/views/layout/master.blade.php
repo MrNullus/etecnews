@@ -76,11 +76,6 @@
                                             Projetos
                                         </a>
                                     </li>
-                                    <li>
-                                        <a class="dropdown-item" href="{{ route('cat.tecnologia') }}">
-                                            Tecnologia
-                                        </a>
-                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
