@@ -14,15 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('client.home');
 })->name('site.home');
 
 Route::get('/contact', function () {
-    return view('contato');
+    return view('client.contato');
 })->name('site.contato');
 
 Route::get('/about', function () {
-    return view('sobre');
+    return view('client.sobre');
 })->name('site.sobre');
 
 
