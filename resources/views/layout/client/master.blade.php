@@ -83,6 +83,11 @@
                                     Sobre
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('site.entrar') }}">
+                                    Entrar
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

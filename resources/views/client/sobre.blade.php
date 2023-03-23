@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.client.master')
 
 @section('title', 'Sobre')
 
@@ -30,6 +30,6 @@
         <img class="img img-about" src="{{ url('images/imagem-sobre.png') }}" alt="Pessoas" />
     </p>
 
-    
+
 </section>
 @endsection

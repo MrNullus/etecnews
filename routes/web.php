@@ -25,6 +25,10 @@ Route::get('/about', function () {
     return view('client.sobre');
 })->name('site.sobre');
 
+Route::get('/entrar', function () {
+    return view('client.entrar');
+})->name('site.entrar');
+
 
 Route::prefix('/categories')->group(function(){
 
