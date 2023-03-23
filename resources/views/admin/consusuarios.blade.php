@@ -1,4 +1,4 @@
-@extends('adm/master')
+@extends('layout.admin.master')
 @section('title','Usuários')
 @section('conteudo')
 
@@ -10,7 +10,7 @@
                     Consulta de Usuários
                     <a href="#" class="btn btn-success btn-sm float-end">Novo Usuário</a>
                 </div>
-               
+
                 <div class="card-body">
                     <table class="table table-striped table-bordered">
                         <thead>

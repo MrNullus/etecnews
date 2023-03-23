@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.client.master')
 
 @section('title', 'Eventos')
 

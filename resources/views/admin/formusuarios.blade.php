@@ -1,4 +1,4 @@
-@extends('adm/master')
+@extends('layout.admin.master')
 @section('title','Usuários')
 @section('conteudo')
 

@@ -1,8 +1,8 @@
-@extends('adm/master')
+@extends('layout.admin.master')
 @section('title','Início')
 @section('conteudo')
 <div class="container-fluid">
-    
+
     <div class="row mt-3">
         <div class="col">
             <div class="alert alert-success">

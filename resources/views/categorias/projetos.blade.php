@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.client.master')
 
 @section('title', 'Projetos')
 
@@ -47,7 +47,7 @@
     </div>
   </div>
 
-  
+
 
 </div> <!-- /container -->
 
