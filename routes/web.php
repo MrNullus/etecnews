@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,35 +16,67 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('client.home');
-})->name('site.home');
 
-Route::get('/contact', function () {
-    return view('client.contato');
-})->name('site.contato');
+// Rotas Controller
+Route::get(
+    '/',
+    [HomeController::class, 'abrirHome']
+)->name('site.home');
 
-Route::get('/about', function () {
-    return view('client.sobre');
-})->name('site.sobre');
+Route::get(
+    '/contact',
+    [HomeController::class, 'abrirContato']
+)->name('site.contato');
 
-Route::get('/entrar', function () {
-    return view('client.entrar');
-})->name('site.entrar');
+Route::get(
+    '/about',
+    [HomeController::class, 'abrirSobre']
+)->name('site.sobre');
+
+Route::get(
+    '/admin',
+    [HomeController::class, 'abrirAdmin']
+)->name('admin.home');
+
+
+// Rotas UserController
+
+
+Route::prefix('/admin')->group(function(){
+
+    Route::get('/usuarios', function () {
+        return view('admin.consusuarios');
+    })->name('admin.usuarios');
+
+    Route::get('/usuarios/register', function () {
+        return view('admin.formusuarios');
+    })->name('admin.usuarios.register');
+
+
+    Route::get('/categorias', function () {
+        return view('admin.formusuarios');
+    })->name('admin.categorias');
+
+    Route::get('/noticias', function () {
+        return view('admin.noticias');
+    })->name('admin.noticias');
+
+});
+
 
 
 Route::prefix('/categories')->group(function(){
 
     Route::get('/novidades', function () {
-        return view('categorias.novidades');
+        return view('client.categorias.novidades');
     })->name('cat.novidades');
 
     Route::get('/projetos', function () {
-        return view('categorias.projetos');
+        return view('client.categorias.projetos');
     })->name('cat.projetos');
 
     Route::get('/eventos', function () {
-        return view('categorias.eventos');
+        return view('client.categorias.eventos');
     })->name('cat.eventos');
 
 });
