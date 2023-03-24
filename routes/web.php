@@ -43,7 +43,7 @@ Route::get(
 
 
 Route::prefix('/admin')->group(function(){
-
+    // Usuarios
     Route::get('/usuarios', function () {
         return view('admin.consusuarios');
     })->name('admin.usuarios');
@@ -53,20 +53,21 @@ Route::prefix('/admin')->group(function(){
     })->name('admin.usuarios.register');
 
 
+    // Categorias
     Route::get('/categorias', function () {
         return view('admin.formusuarios');
     })->name('admin.categorias');
 
+
+    // Noticiais
     Route::get('/noticias', function () {
         return view('admin.noticias');
     })->name('admin.noticias');
-
 });
 
 
 
 Route::prefix('/categories')->group(function(){
-
     Route::get('/novidades', function () {
         return view('client.categorias.novidades');
     })->name('cat.novidades');
@@ -78,5 +79,4 @@ Route::prefix('/categories')->group(function(){
     Route::get('/eventos', function () {
         return view('client.categorias.eventos');
     })->name('cat.eventos');
-
 });

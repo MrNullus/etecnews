@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-header">
                     Cadastro de Usuários
-                    <a href="#" class="btn btn-success btn-sm float-end">Consulta Usuário</a>
+                    <a href="{{ route('admin.usuarios') }}" class="btn btn-success btn-sm float-end">Consulta Usuário</a>
                 </div>
                 <div class="card-body">
                     <form action="" method="post">
@@ -21,10 +21,10 @@
                             <label for="email">E-mail</label>
                             <input type="email" name="email" id="" class="form-control" required>
                         </div>
-                        <div class="mb-2">
+                        {{-- <div class="mb-2">
                             <label for="celular">Celular</label>
                             <input type="text" name="celular" id="" class="form-control">
-                        </div>
+                        </div> --}}
                         <div class="mb-2">
                             <label for="password">Senha</label>
                             <input type="password" name="password" id="" class="form-control" required>

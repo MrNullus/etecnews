@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-header">
                     Consulta de Usuários
-                    <a href="#" class="btn btn-success btn-sm float-end">Novo Usuário</a>
+                    <a href="{{ route('admin.usuarios.register') }}" class="btn btn-success btn-sm float-end">Novo Usuário</a>
                 </div>
 
                 <div class="card-body">
@@ -26,7 +26,7 @@
                         {{-- @foreach ($dadosUser as $value) --}}
                           <tr>
                             <th scope="row">{{-- $value->id --}}</th>
-                            <td>{{$value->nome}}</td>
+                            <td>{{-- $value->nome --}}</td>
                             <td>teste@teste.com</td>
                             {{-- <td>(11)99999-8888</td> --}}
                             <td>Administrador</td>
