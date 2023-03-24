@@ -84,7 +84,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('site.entrar') }}">
+                                <a class="nav-link" href="{{ route('admin.home') }}">
                                     Entrar
                                 </a>
                             </li>
