@@ -1,6 +1,6 @@
 @extends('layout.admin.master')
 @section('title','Usuários')
-@section('conteudo')
+@section('content')
 
 <div class="container">
     <div class="row mt-3">
@@ -18,20 +18,20 @@
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
                             <th scope="col">E-mail</th>
-                            <th scope="col">Celular</th>
+                            {{-- <th scope="col">Celular</th> --}}
                             <th scope="col">Nível de Acesso</th>
                           </tr>
                         </thead>
                         <tbody>
-                        @foreach ($dadosUser as $value)
+                        {{-- @foreach ($dadosUser as $value) --}}
                           <tr>
-                            <th scope="row">{{$value->id}}</th>
+                            <th scope="row">{{-- $value->id --}}</th>
                             <td>{{$value->nome}}</td>
                             <td>teste@teste.com</td>
-                            <td>(11)99999-8888</td>
+                            {{-- <td>(11)99999-8888</td> --}}
                             <td>Administrador</td>
                           </tr>
-                          @endforeach
+                        {{-- @endforeach --}}
                         </tbody>
                       </table>
                 </div>

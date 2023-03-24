@@ -1,6 +1,6 @@
 @extends('layout.admin.master')
 @section('title','Usuários')
-@section('conteudo')
+@section('content')
 
 <div class="container">
     <div class="row mt-3">
