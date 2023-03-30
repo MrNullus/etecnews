@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function abrirHome() {
-        return view('client.home');
+        return view('client.home', []);
     }
 
     public function abrirSobre() {
