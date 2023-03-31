@@ -34,23 +34,33 @@ Route::get(
 )->name('site.sobre');
 
 Route::get(
+    '/news/{:id}',
+    [HomeController::class, 'abrirNoticia']
+)->name('site.noticia');
+
+Route::get(
     '/admin',
     [HomeController::class, 'abrirAdmin']
 )->name('admin.home');
 
 
 // Rotas UserController
-
-
 Route::prefix('/admin')->group(function(){
     // Usuarios
-    Route::get('/usuarios', function () {
-        return view('admin.consusuarios');
-    })->name('admin.usuarios');
+    Route::get(
+        '/usuarios',
+        [UserController::class, 'abrirUsuarios']
+    )->name('admin.usuarios');
 
-    Route::get('/usuarios/register', function () {
-        return view('admin.formusuarios');
-    })->name('admin.usuarios.register');
+    Route::get(
+        '/usuarios/register',
+        [UserController::class, 'abrirCadastro']
+    )->name('admin.usuarios.register');
+
+    Route::post(
+        '/usuarios/register',
+        [UserController::class, 'cadastrar']
+    )->name('gravar-usuario');
 
 
     // Categorias
