@@ -1,5 +1,5 @@
-@extends('master')
-@section('title', 'Início')
+@extends('layout.client.master')
+@section('title', $noticia->title)
 @section('conteudo')
     <div class="container-fluid">
 
@@ -15,10 +15,10 @@
                     </p>
 
                     <img
-						src="{{ asset('images/imagem3.webp') }}"
-						class="card-img-top img-thumbnail"
-						alt="..."
-					/>
+                        src="{{ asset('images/imagem3.webp') }}"
+                        class="card-img-top img-thumbnail"
+                        alt="..."
+                    />
 
                     <p class="mt-2">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi quod quia facere error enim dicta
