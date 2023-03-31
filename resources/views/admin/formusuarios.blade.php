@@ -11,31 +11,29 @@
                     <a href="{{ route('admin.usuarios') }}" class="btn btn-success btn-sm float-end">Consulta Usuário</a>
                 </div>
                 <div class="card-body">
-                    <form action="" method="post">
+                    <form action="{{ route('gravar-usuario') }}" method="post">
                         @csrf
                         <div class="mb-2">
-                            <label for="nome">Nome</label>
-                            <input type="text" name="nome" id="" class="form-control" required>
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" id="" class="form-control" required>
                         </div>
                         <div class="mb-2">
                             <label for="email">E-mail</label>
                             <input type="email" name="email" id="" class="form-control" required>
                         </div>
-                        {{-- <div class="mb-2">
-                            <label for="celular">Celular</label>
-                            <input type="text" name="celular" id="" class="form-control">
-                        </div> --}}
                         <div class="mb-2">
                             <label for="password">Senha</label>
                             <input type="password" name="password" id="" class="form-control" required>
                         </div>
                         <div class="mb-2">
-                            <label for="acesso">Acesso</label>
-                            <select name="acesso" id="acesso" class="form-control">
+                            <label for="level">Acesso</label>
+                            <select name="level" id="level" class="form-control">
                                 <option value="1">Administrador</option>
                                 <option value="2">Usuário</option>
                             </select>
                         </div>
+
+                        <br>
                         <button type="submit" class="btn btn-success">Gravar</button>
                     </form>
                 </div>
