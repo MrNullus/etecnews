@@ -18,20 +18,26 @@
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
                             <th scope="col">E-mail</th>
-                            {{-- <th scope="col">Celular</th> --}}
                             <th scope="col">Nível de Acesso</th>
                           </tr>
                         </thead>
                         <tbody>
-                        {{-- @foreach ($dadosUser as $value) --}}
+                        @foreach ($dadosUser as $user)
                           <tr>
-                            <th scope="row">{{-- $value->id --}}</th>
-                            <td>{{-- $value->nome --}}</td>
-                            <td>teste@teste.com</td>
-                            {{-- <td>(11)99999-8888</td> --}}
-                            <td>Administrador</td>
+                            <th scope="row">
+                                {{ $user->id }}
+                            </th>
+                            <td>
+                                {{ $user->name }}
+                            </td>
+                            <td>
+                                {{ $user->email }}
+                            </td>
+                            <td>
+                                {{ $user->level }}
+                            </td>
                           </tr>
-                        {{-- @endforeach --}}
+                        @endforeach
                         </tbody>
                       </table>
                 </div>
