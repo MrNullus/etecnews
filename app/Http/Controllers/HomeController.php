@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Noticia;
 
 class HomeController extends Controller
 {
     public function abrirHome() {
-        return view('client.home', []);
+        return view('client.home');
     }
 
     public function abrirSobre() {
@@ -20,5 +21,13 @@ class HomeController extends Controller
 
     public function abrirAdmin() {
         return view('admin.home');
+    }
+
+    public function abrirNoticia($id) {
+        $noticia = Noticia::findOrFail($id);
+
+        return view('layout.noticia', [
+            'noticia' => $noticia
+        ]);
     }
 }
