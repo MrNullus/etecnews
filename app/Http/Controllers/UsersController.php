@@ -48,6 +48,17 @@ class UsersController extends Controller
          return view('adm/formusuarios',['u' => $u]);
     }
 
+    public function atualizarUsuario(Request $request) {
+        $u = new User();
+        $u->name        = $request->name;
+        $u->email       = $request->email;
+        $u->password    = $request->password;
+        $u->nivelacesso = $request->nivelacesso;
+
+        $u->update();
+        return redirect('consulta-usuario')->with('msg', 'Dados atualizados com sucesso!');
+    }
+
 
 
 }
