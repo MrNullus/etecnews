@@ -27,6 +27,7 @@ Route::get('/consulta-usuario', [UsersController::class,'abrirConsulta'])->name(
 Route::post('/gravar-usuario', [UsersController::class,'gravarUsuario'])->name('gravar-usuario');
 Route::get('/excluir-usuario/{id}',[UsersController::class,'excluirUsuario'])->name('excluir-usuario');
 Route::get('/editar-usuario/{id}',[UsersController::class,'editarUsuario'])->name('editar-usuario');
+Route::post('/atualizar-usuario/{id}',[UsersController::class,'editarUsuario'])->name('atualizar-usuario');
 
 //Rotas CategoriasController
 Route::get('/nova-categoria', [CategoriasController::class,'abrirCadastro'])->name('nova-categoria');
