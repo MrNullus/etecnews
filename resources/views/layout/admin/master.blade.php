@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="{{ url('css/app.css') }}">
     <link rel="stylesheet" href="{{ url('lib/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ url('lib/owl.theme.default.min.css') }}">
+
+    {{-- DataTables CSS --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
 </head>
 
 <body>
@@ -48,7 +51,10 @@
                         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
                             style="--bs-scroll-height: 100px;">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="{{ route('admin.home') }}">Home</a>
+                                <a class="nav-link active" aria-current="page" href="{{ route('admin.home') }}">
+                                    <i class="fa-regular fa-house"></i>
+                                    Home
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('admin.categorias') }}">
@@ -111,6 +117,18 @@
         </footer>
     </div>
 
+    {{-- JQuery JS --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    {{-- DataTables JS --}}
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+        <script>
+            $(document).ready( function () {
+                $('#tabela').DataTable();
+            });
+        </script>
+
+    {{-- OWL JS --}}
     <script src="{{ url('lib/owl.carousel.min.js') }}"></script>
     <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
 </body>

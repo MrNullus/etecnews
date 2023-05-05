@@ -19,8 +19,8 @@
                 </div>
 
   <div class="card-body">
-    
-      <table class="table table-striped table-bordered">
+
+      <table class="table table-striped table-bordered" id="tabela">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -38,12 +38,16 @@
               <td>{{ $value->email }}</td>
               <td>{{ $value->nivelacesso == 1 ? 'Administrador' : 'Usuário' }}</td>
               <td>
-              <a href="{{route('editar-usuario',$value->id)}}" class="btn btn-warning btn-sm">Editar</a>
-              <a href="{{route('excluir-usuario',$value->id)}}" onclick="return confirm('Deseja relamente excluir?')" class="btn btn-danger btn-sm">Excluir</a>
-            
+              <a href="{{route('editar-usuario',$value->id)}}" class="btn btn-warning btn-sm">
+                <i class="fa-solid fa-user-pen"></i>
+              </a>
+              <a href="{{route('excluir-usuario',$value->id)}}" onclick="return confirm('Deseja relamente excluir?')" class="btn btn-danger btn-sm">
+                <i class="fa-solid fa-trash"></i>
+              </a>
+
               </tr>
               </tr>
-            @endforeach 
+            @endforeach
           </tbody>
         </table>
   </div>
@@ -51,5 +55,7 @@
         </div>
     </div>
 </div>
+
+
 
 @endsection

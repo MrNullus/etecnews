@@ -11,7 +11,7 @@
                     <a href="{{route('consulta-noticias')}}" class="btn btn-success btn-sm float-end">Consulta Notícias</a>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('gravar-noticia') }}" method="post">
+                    <form action="{{ route('gravar-noticia') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-2">
                             <label for="titulo">Título</label>
@@ -29,7 +29,7 @@
 
                         <div class="mb-2">
                             <label for="idcategoria">Categoria</label>
-                            
+
                             <select name="idcategoria" id="idcategoria" class="form-control">
                                 @foreach($dadosCateg as $value)
                                     <option value="{{$value->id}}">{{$value->nomecategoria}}</option>

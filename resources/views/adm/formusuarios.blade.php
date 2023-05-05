@@ -11,8 +11,10 @@
                     <a href="{{route('consulta-usuario')}}" class="btn btn-success btn-sm float-end">Consulta Usuário</a>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('gravar-usuario') }}" method="post">
+                    <form action="{{ isset($u) ? route('atualizar-usuario') : route('gravar-usuario') }}" method="post">
                         @csrf
+                        <input type="hidden" name="{{ isset($u) ? $u->id : null}}" />
+
                         <div class="mb-2">
                             <label for="name">Nome</label>
                             <input type="text" name="name" id="name" class="form-control" value="{{ isset($u)? $u->name : null}}"> <!--if e else simplificado  -->
@@ -29,8 +31,8 @@
                         <div class="mb-2">
                             <label for="nivelacesso">Acesso</label>
                             <select name="nivelacesso" id="nivelacesso" class="form-control">
-                                <option value="1" @if(isset($u) && $u->nivelacesso ==1) selected @endif >Administrador</option>
-                                <option value="2" @if(isset($u) && $u->nivelacesso ==2) selected @endif >Usuário</option>
+                                <option value="1" @if(isset($u) && $u->nivelacesso == 1) selected @endif >Administrador</option>
+                                <option value="2" @if(isset($u) && $u->nivelacesso == 2) selected @endif >Usuário</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-success">Gravar</button>

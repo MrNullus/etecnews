@@ -10,7 +10,7 @@
                     Consulta de Notícias
                     <a href="{{route('nova-noticia')}}" class="btn btn-success btn-sm float-end">Nova Notícia</a>
                 </div>
-               
+
                 <div class="card-body">
                     <table class="table table-striped table-bordered">
                         <thead>
@@ -28,10 +28,12 @@
                             <th scope="row">{{ $value->id }}</th>
                             <td>{{ $value->titulo }}</td>
                             <td>{{ date('d/m/Y', strtotime($value->data)) }}</td>
-                            <td>{{ $value->imagem }}</td>
+                            <td>
+                                <img src="{{ url('images/' . $value->imagem) }}" width="400px" class="rounded" />
+                            </td>
                             <td>{{ $value->nomecategoria }}</td>
                           </tr>
-                         @endforeach 
+                         @endforeach
                         </tbody>
                       </table>
                 </div>
